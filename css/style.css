@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins";
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-image: url("/img/video-bg.jpg");
+    background-size: cover;
+    backdrop-filter: blur(3px);    
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+}
+
+/* LNAVBAR SECTION START */
+
+.lnavbar {
+    display: block;
+}
+
+#title1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: -5px;
+    left: 20px;
+
+}
+
+.lnavbar ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lnavbar ul {
+    position: relative;
+    left: 40px;
+}
+
+/* LNAVBAR IMAGES */
+
+.lnavbar img {
+    position: relative;
+    top: 9px;
+    width: 60px;
+    left: 6px;
+}
+
+
+#lnavimg1 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: -3px;
+}
+
+#lnavimg2 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 60px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg3 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 115px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg4 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 175px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg5 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 235px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg6 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 295px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg7 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 350px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#lnavimg8 {
+    position: absolute;
+    width: 10%;
+    left: -20px;
+    top: 410px;
+    filter: drop-shadow(0.5px 0 0 white);
+}
+
+#v_line {
+    position: absolute;
+    width: 3.5%;
+    left: 280px;
+    top: 150px;
+    filter: brightness(80%);
+}
+
+/* LNAVBAR SECTION END */
+
+.dboard{
+    color: white;
+    position: relative;
+    top: 150px;
+}
