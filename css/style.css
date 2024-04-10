@@ -10,7 +10,7 @@
 body {
     background-image: url("/img/video-bg.jpg");
     background-size: cover;
-    backdrop-filter: blur(3px);    
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     display: flex;
 }
@@ -127,8 +127,52 @@ body {
 
 /* LNAVBAR SECTION END */
 
-.dboard{
+.dboard {
     color: white;
+    height: 90px;
+    width: 300px;
     position: relative;
-    top: 150px;
+    top: 122px;
+    left: 1%;
+}
+
+
+.box1 {
+    position: absolute;
+    top: 233px;
+    left: 334px;
+    width: 230px;
+    height: 129px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.box2 {
+    position: absolute;
+    top:233px;
+    left: 584px;
+    width: 230px;
+    height: 129px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.box3 {
+    position: absolute;
+    top: 233px;
+    left: 834px;
+    width: 230px;
+    height: 129px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.box4 {
+    position: absolute;
+    top: 233px;
+    left: 1084px;
+    width: 230px;
+    height: 129px;
+    border: 1px solid black;
+    border-radius: 15px;
 }
