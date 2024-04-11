@@ -27,7 +27,7 @@ body {
     color: white;
     position: relative;
     top: -5px;
-    left: 20px;
+    left: 15px;
 
 }
 
@@ -119,9 +119,9 @@ body {
 
 #v_line {
     position: absolute;
-    width: 3.5%;
+    width: 4.0%;
     left: 280px;
-    top: 150px;
+    top: 110px;
     filter: brightness(80%);
 }
 
@@ -132,47 +132,201 @@ body {
     height: 90px;
     width: 300px;
     position: relative;
-    top: 122px;
+    top: 80px;
     left: 1%;
 }
 
 
 .box1 {
     position: absolute;
-    top: 233px;
-    left: 334px;
-    width: 230px;
-    height: 129px;
+    top: 180px;
+    left: 340px;
+    width: 270px;
+    height: 180px;
     border: 1px solid black;
     border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
+.box1:hover{
+width:280px;
+height:190px;
+}
+.box2:hover{
+    width:280px;
+    height:190px;
+    }
+    .box3:hover{
+        width:280px;
+        height:190px;
+        }
+        .box4:hover{
+            width:280px;
+            height:190px;
+            }
 
 .box2 {
     position: absolute;
-    top:233px;
-    left: 584px;
-    width: 230px;
-    height: 129px;
+    top:180px;
+    left: 630px;
+    width: 270px;
+    height: 180px;
     border: 1px solid black;
+
     border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 .box3 {
     position: absolute;
-    top: 233px;
-    left: 834px;
-    width: 230px;
-    height: 129px;
+    top: 180px;
+    left: 920px;
+    width: 270px;
+    height: 180px;
     border: 1px solid black;
+
     border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 .box4 {
     position: absolute;
-    top: 233px;
-    left: 1084px;
-    width: 230px;
-    height: 129px;
+    top: 180px;
+    left: 1210px;
+    width: 270px;
+    height: 180px;
+    border: 1px solid black;
+  border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.box5{
+    position: absolute;
+    top: 400px;
+    left: 340px;
+    width: 730px;
+    height: 229px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    
+    border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.box6{
+    position: absolute;
+    top: 440px;
+    left: 1130px;
+    width: 350px;
+    height: 90px;
     border: 1px solid black;
     border-radius: 15px;
+    
+    border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+.box6:hover{
+    width:355px;
+    height:90px;
+    }
+.box7{
+    position: absolute;
+    top: 540px;
+    left:1130px;
+    width: 350px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 15px;
+    
+    border-radius: 15px;
+    background-image: url("/img/model_1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.box7:hover{
+    width:355px;
+    height:90px;
+    }
+.content{
+    position: relative;
+    top: -10px;
+    color:rgb(0, 0, 0);
+}
+
+#cloud{
+    position: relative;
+    left: 170px;
+    top:10px;
+}
+
+
+#eye{
+position:relative;
+left:170px;
+top:10px;
+}
+
+.cloudstorage{
+    position: relative;
+    top:-50px;
+    left:10px;
+    color:rgb(0, 0, 0);
+}
+.dailyvisitors{
+    position:relative;
+    top:-50px;
+    left:10px;
+    color: rgb(0, 0, 0);
+}
+.tasks{
+    color:rgb(0, 0, 0);
+   position: relative;
+   top:-10px;
+   left:20px;
+   font-size: 25px;
+
+}
+#staff{
+    position: relative;
+    left:110px;
+    top:45px;
+}
+#student{
+    position: relative;
+    left:110px;
+    top:40px;
+}
+#intern{
+    position: relative;
+    left:110px;
+    top:40px;
+}
+#member{
+    position: relative;
+    left:110px;
+    top:40px;
+}
+.count{
+    position:relative;
+    top:18px;
+    font-size: 18px;
+    
+}
+
+
