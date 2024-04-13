@@ -13,12 +13,16 @@ body {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     display: flex;
+    
 }
+
 
 /* LNAVBAR SECTION START */
 
 .lnavbar {
     display: block;
+
+   
 }
 
 #title1 {
@@ -54,6 +58,39 @@ body {
     top: 9px;
     width: 60px;
     left: 6px;
+    transition: transform 0.2s ease;
+}
+#lnavimg1:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg2:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg3:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg4:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg5:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg6:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg7:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
+}
+#lnavimg8:hover{
+    transform: scale(1.1);
+   filter:drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5))
 }
 
 
@@ -62,6 +99,7 @@ body {
     width: 10%;
     left: -20px;
     top: -3px;
+    transition: transform 0.3s ease;
 }
 
 #lnavimg2 {
@@ -70,6 +108,7 @@ body {
     left: -20px;
     top: 60px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg3 {
@@ -78,6 +117,7 @@ body {
     left: -20px;
     top: 115px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg4 {
@@ -86,6 +126,7 @@ body {
     left: -20px;
     top: 175px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg5 {
@@ -94,6 +135,7 @@ body {
     left: -20px;
     top: 235px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg6 {
@@ -102,6 +144,7 @@ body {
     left: -20px;
     top: 295px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg7 {
@@ -110,6 +153,7 @@ body {
     left: -20px;
     top: 350px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #lnavimg8 {
@@ -118,6 +162,7 @@ body {
     left: -20px;
     top: 410px;
     filter: drop-shadow(0.5px 0 0 white);
+    transition: transform 0.3s ease;
 }
 
 #v_line {
@@ -151,9 +196,11 @@ body {
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    transition: transform 0.3s ease;
-   
+    
+    
 }
+
+   
 .box1:hover{
     transform: scale(0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -348,7 +395,10 @@ top:10px;
     border: 1px solid black;
     border-radius: 0px;
     background-repeat: no-repeat;
+    background-image: url("/img/ffish.jpeg");
+    background-repeat: no-repeat;
     background-size: cover;
+    
    
 }
 .staff2{
