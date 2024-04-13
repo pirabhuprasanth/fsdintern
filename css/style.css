@@ -19,6 +19,7 @@ body {
 
 .lnavbar {
     display: block;
+   
 }
 
 #title1 {
@@ -37,11 +38,18 @@ body {
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 5px;
+    transition: transform 0.3s ease;
 }
+
+  .lnavbar a:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
+  }
 
 .lnavbar ul {
     position: relative;
     left: 40px;
+    transition: transform 0.3s ease;
 }
 
 /* LNAVBAR IMAGES */
@@ -52,6 +60,43 @@ body {
     width: 60px;
     left: 6px;
 }
+#lnavimg1:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+}
+  #lnavimg2:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg3:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg4:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg4:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg5:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg6:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg7:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+  #lnavimg8:hover  {
+    transform: scale(1.2); /* Zoom in text on hover */
+    filter: drop-shadow(10px 5px 10px black);
+  }
+
 
 
 #lnavimg1 {
@@ -124,6 +169,9 @@ body {
     top: 110px;
     filter: brightness(80%);
 }
+.lnavbar a:hover{
+    
+}
 
 /* LNAVBAR SECTION END */
 
@@ -148,24 +196,27 @@ body {
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
    
 }
-.box1:hover{
-width:280px;
-height:190px;
-}
-.box2:hover{
-    width:280px;
-    height:190px;
-    }
-    .box3:hover{
-        width:280px;
-        height:190px;
-        }
-        .box4:hover{
-            width:280px;
-            height:190px;
-            }
+
+.box1:hover {
+    transform: scale(0.9); /* Change size on hover */
+  
+  }
+
+    .box2:hover {
+        transform: scale(0.9); /* Change size on hover */
+      }
+      
+    .box3:hover {
+        transform: scale(0.9); /* Change size on hover */
+      }
+
+      
+    .box4:hover {
+        transform: scale(0.9); /* Change size on hover */
+      }
 
 .box2 {
     position: absolute;
@@ -179,6 +230,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
    
 }
 
@@ -194,7 +246,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-   
+    transition: transform 0.3s ease;
 }
 
 .box4 {
@@ -208,7 +260,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-   
+    transition: transform 0.3s ease;
 }
 .box5{
     position: absolute;
@@ -238,12 +290,15 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
 
 }
-.box6:hover{
-    width:355px;
-    height:90px;
-    }
+
+.box6:hover {
+    transform: scale(1.1); /* Change size on hover */
+  }
+
+
 .box7{
     position: absolute;
     top: 540px;
@@ -257,8 +312,13 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+    transition: transform 0.3s ease;
 
 }
+.box7:hover {
+    transform: scale(1.1); /* Change size on hover */
+  }
+
 .box7:hover{
     width:355px;
     height:90px;
@@ -328,5 +388,48 @@ top:10px;
     font-size: 18px;
     
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 100px;
+  }
+  
+  .next {
+    right: 100px;
+  }
+  
 
 
