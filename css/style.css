@@ -37,7 +37,10 @@ body {
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 5px;
+
 }
+
+ 
 
 .lnavbar ul {
     position: relative;
@@ -148,24 +151,26 @@ body {
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
    
 }
 .box1:hover{
-width:280px;
-height:190px;
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .box2:hover{
-    width:280px;
-    height:190px;
-    }
-    .box3:hover{
-        width:280px;
-        height:190px;
-        }
-        .box4:hover{
-            width:280px;
-            height:190px;
-            }
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.box3:hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.box4:hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 
 .box2 {
     position: absolute;
@@ -179,6 +184,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
    
 }
 
@@ -194,6 +200,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
    
 }
 
@@ -208,7 +215,7 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-   
+    transition: transform 0.3s ease;
 }
 .box5{
     position: absolute;
@@ -238,11 +245,13 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.3s ease;
 
 }
 .box6:hover{
-    width:355px;
-    height:90px;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
     }
 .box7{
     position: absolute;
@@ -257,11 +266,12 @@ height:190px;
     background-image: url("/img/model_1.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+    transition: transform 0.3s ease;
 
 }
 .box7:hover{
-    width:355px;
-    height:90px;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 .content{
     position: relative;
@@ -329,4 +339,76 @@ top:10px;
     
 }
 
+.staff1{
+    position: absolute;
+    top: 160px;
+    left: 340px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.staff2{
+    position: absolute;
+    top: 160px;
+    left: 640px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.staff3{
+    position: absolute;
+    top: 160px;
+    left: 940px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.staff4{
+    position: absolute;
+    top: 430px;
+    left: 340px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.staff5{
+    position: absolute;
+    top: 430px;
+    left: 640px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.staff6{
+    position: absolute;
+    top: 430px;
+    left: 940px;
+    width: 270px;
+    height: 220px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
 
