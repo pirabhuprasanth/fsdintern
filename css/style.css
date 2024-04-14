@@ -17,6 +17,7 @@ body {
 }
 
 
+
 /* LNAVBAR SECTION START */
 
 .lnavbar {
@@ -460,5 +461,13 @@ top:10px;
     background-repeat: no-repeat;
     background-size: cover;
    
+}
+/*intern page*/
+.slider-container {
+    position: relative;
+    top:270px;
+    left:-100px;
+
+
 }
 
