@@ -1,0 +1,1138 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+--Common_height: 80vh;
+--Common_height_2: 80vh;
+}
+body{
+overflow: hidden;
+}
+
+.blur-background {
+width: 100%;
+height:100% ;
+background-image: url('/Image/video-bg.webp');
+position: absolute;
+z-index: -999;
+filter: blur(7px);
+background-position: left;  
+background-size:auto;
+}
+header{
+width: 100%;
+padding: 15px 30px;
+font: normal 800 35px/35px Poppins;
+display: flex;
+align-items: center;
+color: aliceblue;
+gap: 20px;
+}
+header img{
+width: 60px;
+}
+.menu_bar{
+display: none;
+}
+
+.body_section{
+width: 100%;
+display: flex;
+align-items: center;
+text-decoration: none;
+}
+/* ----------Navbar design (part 1)-----------  */
+.body_section nav{
+  display: flex;
+  width: 60px;
+  min-width: 60px;
+  height: var(--Common_height);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition:0.2s ease-in-out;
+  
+}
+/* Custom scrollbar styles */
+nav::-webkit-scrollbar {
+width: 2px; /* Width of the scrollbar */
+}
+nav::-webkit-scrollbar-track {
+background: #ffffff; /* Track color */
+}
+
+nav::-webkit-scrollbar-thumb {
+background: #888; /* Thumb color */
+border-radius: 2px; /* Rounded corners */
+}
+nav::-webkit-scrollbar-thumb:hover {
+background: #008d17; /* Thumb color on hover */
+}
+
+.nav_list [class*= nav]{
+  width: 250px;
+  min-width: 250px;
+  padding: 22px 0 22px 15px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+.nav_list div{
+  width: 250px;
+  padding-left: 20px;
+  font: normal 600 20px/20px Poppins;
+  color: rgb(255, 255, 255);
+
+}
+.nav_list  i{
+  width: 50px;
+  font-size: 25px;
+  color: rgb(254, 254, 254);
+}
+nav:hover{ 
+  min-width: 300px;
+
+}
+
+.nav_list > a:hover i {
+  font-size: 26px;
+  color: black;
+}
+.nav_list > a:hover div {
+  font-size: 21px;
+  color: black;
+}
+  /* ------------Changeable Contants here (part2)----------- */
+  .body_section .changeable_div{
+    width: 100%;
+    height: var(--Common_height);
+    padding: 10px 0 0 20px;
+    /* background-color: rgb(166, 144, 0); */
+  }
+
+  .heading{
+    width: 100%;
+    font: normal 600 23px/23px Poppins;
+    color: rgb(255, 255, 255);
+  }
+
+
+
+  @media only screen and (max-width: 800px) {
+    .body_section nav{
+  
+      position: fixed;
+    }
+    .body_section .changeable_div{
+      margin: 0 0 0 60px;
+    }
+    .nav_list div{
+      color: rgb(0, 0, 0);
+    }
+    .nav_list  i{
+      color: rgb(0, 0, 0);
+    }
+    .menu_bar:hover{
+      color: black;
+    }
+    nav:hover{ 
+      min-width: 300px;
+      background-color: rgb(255, 255, 255);
+      border:2px solid rgb(0, 255, 4) ;
+    }
+    .nav_list > a:hover i {
+      font-size: 26px;
+      color: rgb(0, 255, 4);
+    }
+    .nav_list > a:hover div {
+      font-size: 21px;
+      color: rgb(0, 255, 4);
+    }
+  }
+  .nav_list [class*= nav]{
+    width: 250px;
+    min-width: 250px;
+    padding: 22px 0 22px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  
+  }
+  .nav_list div{
+    width: 250px;
+    padding-left: 20px;
+    font: normal 600 20px/20px Poppins;
+    color: rgb(255, 255, 255);
+  
+  }
+  .nav_list  i{
+    width: 50px;
+    font-size: 25px;
+    color: rgb(254, 254, 254);
+  }
+  nav:hover{ 
+    min-width: 300px;
+  
+  }
+  
+  .nav_list > a:hover i {
+    font-size: 26px;
+    color: black;
+  }
+  .nav_list > a:hover div {
+    font-size: 21px;
+    color: black;
+  }
+  .body_section nav{
+  display: flex;
+    width: 60px;
+    min-width: 60px;
+    height: var(--Common_height);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.2s ease-in-out;
+}
+  @media only screen and (max-width: 600px){
+    .body_section{
+      flex-direction: column;
+    }
+    .body_section nav{
+      display: block;
+      background-color: rgb(255, 255, 255);
+      border: 0;
+      width: 100%;
+      height: 0;
+      transition:0.2s ease-in;
+    }
+
+    .menu_bar{
+      display: block;
+      position: absolute;
+      font-size: 30px;
+      top: 30px;
+      right: 20px;
+    }
+
+     .body_section nav.menu_open{
+      height: var(--Common_height);
+    }
+    .nav_list div{
+      color: rgb(0, 0, 0);
+    }
+    .nav_list  i{
+      color: rgb(0, 0, 0);
+    }
+    .menu_bar:hover{
+      color: black;
+    }
+    nav:hover{ 
+      min-width: 300px;
+    }
+    .nav_list > a:hover i {
+      font-size: 26px;
+      color: rgb(0, 255, 4);
+    }
+    .nav_list > a:hover div {
+      font-size: 21px;
+      color: rgb(0, 255, 4);
+    }
+    /* _______Changeable_div___________ */
+    .body_section .changeable_div{
+      margin: 0 0 0 0px;
+    }
+  }
+  .nav_list [class*= nav]{
+    width: 250px;
+    min-width: 250px;
+    padding: 22px 0 22px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  
+  }
+  .nav_list div{
+    width: 250px;
+    padding-left: 20px;
+    font: normal 600 20px/20px Poppins;
+    color: rgb(255, 255, 255);
+  
+  }
+  .nav_list  i{
+    width: 50px;
+    font-size: 25px;
+    color: rgb(254, 254, 254);
+  }
+  nav:hover{ 
+    min-width: 300px;
+  
+  }
+  
+  .nav_list > a:hover i {
+    font-size: 26px;
+    color: black;
+  }
+  .nav_list > a:hover div {
+    font-size: 21px;
+    color: black;
+  }
+  .nav_list{
+    display: inline;
+  }
+
+  /* __________________________________Dashboard________________________________________________
+  __________________________________________________________________________________ */
+
+
+  .body_contents{
+    width: 100%;
+    height: var(--Common_height_2);
+    padding: 10px;
+    z-index: -999;
+    overflow-y:scroll;
+  }
+
+  .content_part1, .content_part1 .part1_box, .content_part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .content_part1{
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .content_part1 .part1_box{
+    width: 20%;
+    height: 150px;
+    background-color: rgb(224, 255, 214);
+    flex-flow: column;
+    gap: 10px;
+    background: url(/Image/model_1.webp) no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+    border: 1px solid black;
+    
+  }
+  .content_part1 .part1_box i{
+    font-size: 30px;
+  }
+  .content_part1 .part1_box .count{
+    font: normal 500 25px/25px Poppins;
+  }
+  .content_part1 .part1_box .Words{
+    font: normal 600 16px/15px Poppins;
+  }
+  .part1_box:hover{
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+
+.content_part2{
+  
+  width:100%;
+  height: 50vh;
+
+  margin-top: 25px;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+    /*____________________________staff page___________________________________________________________________
+    _____________________________________________________________________________________________________*/
+.body_contents .outer{
+  width: 100%;
+  height: var(--Common_height_2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 50px;
+  padding: 10px 0;
+}
+.outer div{
+  width: 150px;
+  height: 150px;
+}
+.outer div img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0 70%;
+}
+.hide{
+    display: none;
+}
+.clicked{
+    width: 100% !important;
+    height: 300px !important;
+}
+  
+    /*_______________________________intern page____________________________________
+  ________________________________________________________________________________*/
+  /*intern page flip card*/
+.intern_profile{
+width: 100%;
+display: flex;
+}
+
+.intern_info{
+width: 80%;
+height: 205px;
+padding-left: 2%;
+border-radius: 2px;
+text-align: left;
+}
+
+.ibl thead {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.ibl {
+  width: 60%;
+
+
+}
+.ibl tbody tr td {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+th, td {
+  
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #000000;
+  color: #ffffff;
+}
+input[type="text"] {
+  width: 100%;
+  height:5vh;
+  border-radius: 5px;
+}
+.delete-btn {
+  background-color: #000000;
+  color: white;
+  border-radius: 2px;
+ 
+  cursor: pointer;
+}
+#BTNSUBMIT{
+  border: #000;
+  border-radius: 5px;
+  background-color: #223124;
+  padding: 12px 20px; /* Adjust padding for larger size */
+  font-size: 16px; /* Adjust font size for larger text */
+  color: white; /* Text color */
+  cursor: pointer;
+  
+}
+/*_____________________________student page____________________________________________________
+________________________________________________________________________________________________*/
+
+/* .future{
+  font-size: 40px;
+  
+} */
+
+/*_________________________________member page____________________________________________________*/
+.members_details{
+  width:100%;
+  height:8vh;
+  background-color:rgb(0, 0, 0);
+  border-radius:30px;
+  padding-left:5px;
+  padding-top:3px;
+  display:flex;
+  gap:13%;
+}
+.members_details .members_image {
+  width:4%;
+  height:7vh;
+  background: url(/Image/model_1.webp) no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+
+.column_name{
+  width:100%;
+  height:8vh;
+  background-color: #ffffff;
+  opacity:0.7;
+  margin-bottom: 1%;
+  display: flex;
+ gap:13%;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  background: #000000;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+  padding: 2rem 1rem;
+  text-align: center;
+  /* background: #e74c3c; */
+  /* color: #fff; */
+  font-size: 2.5rem;
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl thead {
+  background: #424949;
+  color: #fff;
+}
+
+.tbl thead tr th {
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+  vertical-align: top;
+  border: 1px solid #aab7b8;
+}
+
+.tbl tbody tr td {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #aab7b8;
+  padding: 0.8rem;
+}
+
+.tbl tr:nth-child(even) {
+  background: #ccc;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.tbl tr:hover td {
+  background: #839192;
+  color: #000;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .tbl thead {
+    display: none;
+  }
+
+  .tbl tr,
+  .tbl td {
+    display: block;
+    width: 100%;
+  }
+
+  .tbl tr {
+    margin-bottom: 1rem;
+  }
+
+  .tbl tbody tr td {
+    text-align: right;
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  .tbl td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+
+  .tbl tbody tr td:hover {
+    background: #ccc;
+    color: #000;
+  }
+
+  .tbl_content {
+    padding: 1rem;
+  }
+}
+
+
+/*_____________________________________project page____________________________________________*/
+.project_1{
+  width:100%;
+  height: 8vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  margin-bottom: 1%;
+  gap: 13%;
+  padding:20px;
+  opacity:0.7;
+
+}
+
+.project_reports{
+  width:100%;
+ height: 10vh;
+  background-color: rgb(255, 255, 255);
+}
+.project_2{
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  margin-bottom: 0%;
+  gap:30%;
+  padding: 20px;
+  opacity: 0.7;
+}
+#dropdown{
+  width:100%;
+  height:8vh;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+.count-input {
+  width: 50px;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+.decrease-btn,
+.increase-btn {
+  background-color: #06c32c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.decrease-btn:hover,
+.increase-btn:hover {
+  background-color: #033000;
+}
+
+.customer_button{
+  width: 20%;
+  height: 30vh;
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 40px;
+
+} 
+
+.report_button{
+  width: 20%;
+  height: 30vh;
+  padding: 10px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  display:block;
+  text-decoration: none;
+  text-align: center;
+  justify-content: right;
+  
+}
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+.sliders{
+  width: 500px;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+.navigation-manual{
+
+}
+.manual-btn{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+.manual-btn :hover{
+  background: black;
+}
+#radio1:checked~.first{
+  margin-left: 0;
+}
+#radio2:checked~.first{
+  margin-left:-20%;
+}
+#radio3:checked~.first{
+  margin-left:-40%;
+}
+#radio4:checked~.first{
+  margin-left:-60%;
+}
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.navigation-auto div{
+  border: 2px solid blueviolet;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+#radio1:checked~.navigation-auto .auto-btn1{
+  background: blueviolet;
+}
+#radio2:checked~.navigation-auto .auto-btn2{
+  background: blueviolet;
+}
+#radio3:checked~.navigation-auto .auto-btn3{
+  background: blueviolet;
+}
+#radio4:checked~.navigation-auto .auto-btn4{
+  background: blueviolet;
+}
+
+
+/*_____________________________________customer details____________________________________________*/
+.members_details{
+  width:100%;
+  height:8vh;
+  background-color:rgb(255, 255, 255);
+  border-radius:30px;
+  padding-left:5px;
+  padding-top:3px;
+  display:flex;
+  gap:13%;
+}
+.members_details .members_image {
+  width:4%;
+  height:7vh;
+  background: url(/Image/model_1.webp) no-repeat center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+
+.column_name{
+  width:100%;
+  height:8vh;
+  background-color: #493b3b;
+  opacity:0.7;
+  margin-bottom: 1%;
+  display: flex;
+ gap:13%;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+  padding: 2rem 1rem;
+  text-align: center;
+  /* background: #e74c3c; */
+  /* color: #fff; */
+  font-size: 2.5rem;
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tbl thead {
+  background: #424949;
+  color: #fff;
+}
+
+.tbl thead tr th {
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+  vertical-align: top;
+  border: 1px solid #aab7b8;
+}
+
+.tbl tbody tr td {
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #aab7b8;
+  padding: 0.8rem;
+}
+
+.tbl tr:nth-child(even) {
+  background: #ffffff;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.tbl tr:hover td {
+  background: #839192;
+  color: #000;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .tbl thead {
+    display: none;
+  }
+
+  .tbl tr,
+  .tbl td {
+    display: block;
+    width: 100%;
+  }
+
+  .tbl tr {
+    margin-bottom: 1rem;
+  }
+
+  .tbl tbody tr td {
+    text-align: right;
+    position: relative;
+    transition: all 0.2s ease-in;
+  }
+
+  .tbl td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 1.2rem;
+    text-align: left;
+  }
+
+  .tbl tbody tr td:hover {
+    background: #ccc;
+    color: #000;
+  }
+
+  .tbl_content {
+    padding: 1rem;
+  }
+}
+/*________________________________________project report___________________*/
+
+
+.report_button1 {
+  width: 50%;
+  height: 35vh;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #8bdc8e;
+  color: rgb(240, 234, 234);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+ 
+ 
+}
+.report_button2 {
+  width: 50%;
+  height: 35vh;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #8bdc8e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+
+
+ margin-top: 3%;
+}
+
+
+
+
+/*  __________________________________________ calender __________________________________ */
+
+/* General styling for the entire page */
+body {
+	font-family: Arial, sans-serif;
+	background-color: white;
+	margin: 0;
+}
+
+.wrapper {
+	max-width: 1100px;
+	margin: 15px auto;
+}
+
+/* Calendar container */
+.container-calendar {
+	background: #ffffff;
+	padding: 10px;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Event section styling */
+#event-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+.container-calendar #left h1 {
+	color: green;
+	text-align: center;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 10px 0;
+}
+
+#event-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#event-section input[type="date"],
+#event-section input[type="text"] {
+	margin: 10px 0;
+	padding: 5px;
+	width: 80%;
+}
+
+#event-section button {
+	background: green;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.event-marker {
+	position: relative;
+}
+
+.event-marker::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* event tooltip styling */
+.event-tooltip {
+	position: absolute;
+	background-color: rgba(234, 232, 232, 0.763);
+	color: black;
+	padding: 10px;
+	border-radius: 4px;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	transition: all 0.3s;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.event-marker:hover .event-tooltip {
+	display: block;
+}
+
+/* Reminder section styling */
+#reminder-section {
+	padding: 10px;
+	background: #f5f5f5;
+	margin: 20px 0;
+	border: 1px solid #ccc;
+}
+
+#reminder-section h3 {
+	color: green;
+	font-size: 18px;
+	margin: 0;
+}
+
+#reminderList {
+	list-style: none;
+	padding: 0;
+}
+
+#reminderList li {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+/* Style for the delete buttons */
+.delete-event {
+	background: rgb(237, 19, 19);
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 10px;
+	align-items: right;
+}
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+	cursor: pointer;
+	background: green;
+	color: #fff;
+	border: 1px solid green;
+	border-radius: 4px;
+	padding: 5px 10px;
+}
+
+/* Calendar table */
+.table-calendar {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+	padding: 5px;
+	border: 1px solid #e2e2e2;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* Date picker */
+.date-picker.selected {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+	border-bottom: 2px solid currentColor;
+}
+
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+	color: red;
+	/* Sunday */
+}
+
+.date-picker:nth-child(6) {
+	color: green;
+	/* Friday */
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+	text-align: center;
+	margin-top: 0;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+	position: relative;
+	margin-bottom: 1em;
+	overflow: hidden;
+	clear: both;
+}
+
+#previous {
+	float: left;
+}
+
+#next {
+	float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+	margin-top: 1em;
+	border-top: 1px solid #dadada;
+	padding: 10px 0;
+}
+
+.footer-container-calendar select {
+	cursor: pointer;
+	background: #ffffff;
+	color: #585858;
+	border: 1px solid #bfc5c5;
+	border-radius: 3px;
+	padding: 5px 1em;
+}
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/Css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8d9491e66a.js" crossorigin="anonymous"></script>
+  <script src="/Script/script.js"></script>
+</head>
+
+<body>
+  <!-- Background image with Blur -->
+  <div class="blur-background"></div>
+
+  <header>
+    <img src="/Image/logo.png" alt="PS8_LOGO">
+    Admin Panel
+    <div class="menu_bar" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+</header>
+<section class="body_section">
+    <nav>
+        <div class="nav_list">
+            <a href="/index.html" class="nav1"><i class="fa-solid fa-house"></i>
+                <div>Dashboard</div>
+            </a>
+            <a href="/html/staffs.html" class="nav2"><i class="fa-solid fa-user-group"></i>
+                <div>Staffs</div>
+            </a>
+            <a href="/html/interns.html" class="nav3"><i class="fa-solid fa-user-graduate"></i>
+                <div>Interns</div>
+            </a>
+            <a href="/html/students.html" class="nav4"><i class="fa-solid fa-graduation-cap"></i>
+                <div>Students</div>
+            </a>
+            <a href="/html/members.html" class="nav5"><i class="fa-solid fa-users"></i>
+                <div>Members</div>
+            </a>
+            <a href="/html/project.html" class="nav6"><i class="fa-regular fa-lightbulb"></i>
+                <div>Projects</div>
+            </a>
+           
+        </div>
+    </nav>
+    <div class="changeable_div">
+      <div class="heading">
+        Interns
+      </div>
+      <div class="body_contents">
+       
+          <div class="intern_info">
+           
+                
+            <body>
+            
+            <table class="auto-style1">
+                <tr>
+                    <td>NAME</td>
+                    <td><input type="text" value="" id="txtbox1" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="text" value="" id="txtbox2" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Mobile number</td>
+                    <td><input type="text" value="" id="txtbox3" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Wing</td>
+                    <td><input type="text" value="" id="txtbox4" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Period</td>
+                    <td><input type="text" value="" id="txtbox5" /></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" VALUE="SUBMIT" id="BTNSUBMIT" onclick="addrow()"/></td>
+                </tr>
+            </table>
+            <table id="mytable" border="1">
+                <tr>
+                    <th>NAME</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Wing</th>
+                    <th>Period</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            
+            <script>
+                // Load data from local storage if available
+                window.onload = function() {
+                    loadTableData();
+                };
+            
+                // Function to add row to the table
+                function addrow() {
+                    var name = document.getElementById("txtbox1").value;
+                    var email = document.getElementById("txtbox2").value;
+                    var mobile = document.getElementById("txtbox3").value;
+                    var wing = document.getElementById("txtbox4").value;
+                    var period = document.getElementById("txtbox5").value;
+                    var table = document.getElementById("mytable");
+                    var row = table.insertRow(1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+                    var cell6 = row.insertCell(5); // New cell for delete button
+                    cell1.innerHTML = '<input type="text" class="editable" value="' + name + '">';
+                    cell2.innerHTML = '<input type="text" class="editable" value="' + email + '">';
+                    cell3.innerHTML = '<input type="text" class="editable" value="' + mobile + '">';
+                    cell4.innerHTML = '<input type="text" class="editable" value="' + wing + '">';
+                    cell5.innerHTML = '<input type="text" class="editable" value="' + period + '">';
+                    cell6.innerHTML = '<button class="delete-btn" onclick="deleteRow(this)">Delete</button>'; // Delete button
+                    saveTableData();
+                }
+            
+                // Function to delete row
+                function deleteRow(row) {
+                    var i = row.parentNode.parentNode.rowIndex;
+                    document.getElementById("mytable").deleteRow(i);
+                    saveTableData();
+                }
+            
+                // Function to save table data to local storage
+                function saveTableData() {
+                    var tableData = [];
+                    var table = document.getElementById("mytable");
+                    for (var i = 1; i < table.rows.length; i++) {
+                        var row = table.rows[i];
+                        var rowData = [];
+                        for (var j = 0; j < row.cells.length - 1; j++) { // Exclude last cell (delete button)
+                            rowData.push(row.cells[j].getElementsByTagName("input")[0].value);
+                        }
+                        tableData.push(rowData);
+                    }
+                    localStorage.setItem("tableData", JSON.stringify(tableData));
+                }
+            
+                // Function to load table data from local storage
+                function loadTableData() {
+                    var tableData = JSON.parse(localStorage.getItem("tableData"));
+                    if (tableData) {
+                        var table = document.getElementById("mytable");
+                        for (var i = 0; i < tableData.length; i++) {
+                            var rowData = tableData[i];
+                            var row = table.insertRow(-1);
+                            for (var j = 0; j < rowData.length; j++) {
+                                var cell = row.insertCell(j);
+                                cell.innerHTML = '<input type="text" class="editable" value="' + rowData[j] + '">';
+                            }
+                            var deleteCell = row.insertCell(rowData.length); // Insert delete button cell
+                            deleteCell.innerHTML = '<button class="delete-btn" onclick="deleteRow(this)">Delete</button>';
+                        }
+                    }
+                }
+            
+                // Event listener to save edited data
+                document.addEventListener("input", function(event) {
+                    if (event.target.classList.contains("editable")) {
+                        saveTableData();
+                    }
+                });
+            </script>
+            
+        </div>
+        </div>
+      </div>
+      
+  </section>
+  
+</body>
+
+</html> 

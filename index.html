@@ -1,77 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PS8 Network</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/img/favicon.ico">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d9491e66a.js" crossorigin="anonymous"></script>
+    <script src="/Script/script.js"></script>
 </head>
 
-<body oncopy="return false" oncut="return false" onpaste="return false">
-    <!-- NAVIGATION BAR -->
-    <div class="lnavbar">
-     
-        <img src="/img/ps8_white.png" alt="">
-        <a id="title1">Admin Panel</a>
-        <br><br>
-        <ul>
-            <a href="/index.html" class="name1"><img src="/img/icons/home_icon.png" alt="" id="lnavimg1">Dashboard</a><br><br>     
-            <a href="/html/staff.html"  class="name2"><img src="/img/icons/staff_new_icon.png" alt="" id="lnavimg2">Staffs</a><br><br>            
-            <a href="/html/interns.html"  class="name3"><img src="/img/icons/intern_icon_new.png" alt="" id="lnavimg3">Interns</a><br><br>            
-            <a href="/html/students.html"  class="name4"><img src="/img/icons/student_icon_new.png" alt="" id="lnavimg4">Students</a><br><br>            
-            <a href="/html/members.html" class="name5"><img src="/img/icons/members_new_icon.png" alt="" id="lnavimg5">Members</a><br><br>            
-            <a href="/html/projects.html" class="name6"><img src="/img/icons/project-management_icon.png" alt="" id="lnavimg6">Projects</a><br><br>           
-            <a href="/html/credentials.html"  class="name7"><img src="/img/icons/certificate_icon.png" alt="" id="lnavimg7">Credentials</a><br><br>           
-            <a href="/html/security.html"  class="name8"><img src="/img/icons/security_icon.png" alt="" id="lnavimg8">Security</a><br>
-        </ul>
-        <img src="/img/v_line.png" alt="" id="v_line"><br><br><br>
-    </div>
-    <!-- NAVIGATION BAR END -->
-    <br>
+<body>
+    <!-- Background image with Blur -->
+    <div class="blur-background"></div>
 
-      <h1 class="dboard" >Dashboard</h1>
-
-        <div class="box1">
-            <img src="/img/staff_icon.png" alt="" id="staff" height="50px " width="50px">
-            <center><h4 class="count">6</h4></center>
-            <center> <h3 class="content">Staffs</h3></center>
-           
-        </div><br>
-        <div class="box2">
-            
-            <img src="/img/intern_icon.png" alt="" id="intern" height="50px " width="50px">
-            <center><h4 class="count">11</h4></center>
-            <center> <h3 class="content">Interns</h3></center>
-        </div><br>
-        <div class="box3">
-        
-            <img src="/img/student_icon.png" alt="" id="student" height="50px " width="50px">
-            <center> <h4 class="count">550</h4></center>
-            <center> <h3 class="content">Students</h3></center>
-        </div><br>
-        <div  class="box4">
-            <img src="/img/members_icon.png" alt="" id="member" height="50px " width="50px">
-            <center> <h4 class="count">3,098</h4></center>
-            <center> <h3 class="content">Members</h3></center>
-        </div><br>
-
-        <div  class="box5">
-       <h3 class="tasks">Tasks</h3>
-        </div><br>
-        <div  class="box6">
-         <img src="/img/icons/cloud.png" alt="" id="cloud" height="50px " width="50px">
-           <h3 class="cloudstorage">Cloud storage</h3><br><br>     
-        </div><br>
-        <div  class="box7">
-            <img src="/img/icons/eye.png" alt="" id="eye" height="50px " width="50px">
-           <h3 class="dailyvisitors">Daily visitors</h3>
-        </div><br>  
-            </a>
-        </div>
-   
-
-
+    <header>
+        <img src="/Image/logo.png" alt="PS8_LOGO">
+        Admin Panel
+        <div class="menu_bar" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    <section class="body_section">
+        <nav>
+            <div class="nav_list">
+                <a href="/index.html" class="nav1"><i class="fa-solid fa-house"></i>
+                    <div>Dashboard</div>
+                </a>
+                <a href="/html/staffs.html" class="nav2"><i class="fa-solid fa-user-group"></i>
+                    <div>Staffs</div>
+                </a>
+                <a href="/html/interns.html" class="nav3"><i class="fa-solid fa-user-graduate"></i>
+                    <div>Interns</div>
+                </a>
+                <a href="/html/students.html" class="nav4"><i class="fa-solid fa-graduation-cap"></i>
+                    <div>Students</div>
+                </a>
+                <a href="/html/members.html" class="nav5"><i class="fa-solid fa-users"></i>
+                    <div>Members</div>
+                </a>
+                <a href="/html/project.html" class="nav6"><i class="fa-regular fa-lightbulb"></i>
+                    <div>Projects</div>
+                </a>
+               
+            </div>
+        </nav>
+        <div class="changeable_div">
+            <div class="heading">
+                Dashboard
+            </div>
+            <div class="body_contents">
+                <div class="content_part1">
+                    <div class="part1_box">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="count">3,030</div>
+                        <div class="Words">Members</div>
+                    </a>
+                    </div>
+                    <div class="part1_box">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="count">6</div>
+                        <div class="Words">Staffs</div>
+                    </div>
+                    <div class="part1_box">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div class="count">11</div>
+                        <div class="Words">Interns</div>
+                    </div>
+                    <div class="part1_box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="count">0</div>
+                        <div class="Words">Students</div>
+                    </div>
+                </div>
+                <div class="content_part2">
+                   <!-- Main wrapper for the calendar application -->
+	<div class="wrapper">
+		<div class="container-calendar">
+			<div id="left">
+				<h1>Dynamic Calendar</h1>
+				<div id="event-section">
+					<h3>Add Event</h3>
+					<input type="date" id="eventDate">
+					<input type="text"
+						id="eventTitle"
+						placeholder="Event Title">
+					<input type="text"
+						id="eventDescription"
+						placeholder="Event Description">
+					<button id="addEvent" onclick="addEvent()">
+						Add
+					</button>
+				</div>
+				<div id="reminder-section">
+					<h3>Reminders</h3>
+					<!-- List to display reminders -->
+					<ul id="reminderList">
+						<li data-event-id="1">
+							<strong>Event Title</strong>
+							- Event Description on Event Date
+							<button class="delete-event"
+								onclick="deleteEvent(1)">
+								Delete
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="right">
+				<h3 id="monthAndYear"></h3>
+				<div class="button-container-calendar">
+					<button id="previous"
+							onclick="previous()">
+						‹
+					</button>
+					<button id="next"
+							onclick="next()">
+						›
+					</button>
+				</div>
+				<table class="table-calendar"
+					id="calendar"
+					data-lang="en">
+					<thead id="thead-month"></thead>
+					<!-- Table body for displaying the calendar -->
+					<tbody id="calendar-body"></tbody>
+				</table>
+				<div class="footer-container-calendar">
+					<label for="month">Jump To: </label>
+					<!-- Dropdowns to select a specific month and year -->
+					<select id="month" onchange="jump()">
+						<option value=0>Jan</option>
+						<option value=1>Feb</option>
+						<option value=2>Mar</option>
+						<option value=3>Apr</option>
+						<option value=4>May</option>
+						<option value=5>Jun</option>
+						<option value=6>Jul</option>
+						<option value=7>Aug</option>
+						<option value=8>Sep</option>
+						<option value=9>Oct</option>
+						<option value=10>Nov</option>
+						<option value=11>Dec</option>
+					</select>
+					<!-- Dropdown to select a specific year -->
+					<select id="year" onchange="jump()"></select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Include the JavaScript file for the calendar functionality -->
+	<script src="/Script/main.js"></script>
 </body>
 
-</html> 
+</html>
+                            
+                            
+                          
+                        </html>
+                       
+
+             </div>
+    </section>
+</body>
+</html>
